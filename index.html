@@ -3,33 +3,950 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f3ed">
-  <meta name="description" content="Una visita a la vida y las ideas de Emmy Noether, matemática cuya obra conectó simetría, conservación y álgebra abstracta.">
-  <title>Emmy Noether — Simetría que revela</title>
+  <meta name="theme-color" content="#f3f6f1">
+  <meta name="description" content="Una visita interactiva a la vida y las ideas de Emmy Noether y Srinivasa Ramanujan: simetría, conservación, álgebra abstracta, teoría de números y particiones.">
+  <title>Mentes en Movimiento — Emmy Noether & Srinivasa Ramanujan</title>
   <style>
-    :root{--paper:#f3f6f1;--ink:#202724;--muted:#535c55;--green:#245548;--lime:#d5e65a;--line:#d8d8cc;--cream:#e5ebe3;--white:#fffefa;--serif:Georgia,'Times New Roman',serif;--sans:'Avenir Next','Segoe UI',sans-serif}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65}a{color:inherit}button{font:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.topbar{position:sticky;top:0;z-index:5;background:#f3f6f1eb;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{font-weight:800;letter-spacing:-.04em;text-decoration:none}.brand span{color:var(--green)}nav{display:flex;align-items:center;gap:22px;overflow:auto;white-space:nowrap}nav a{text-decoration:none;font-size:.78rem;color:var(--muted)}nav a:hover{color:var(--green)}.hero{padding:72px 0 90px;overflow:hidden}.eyebrow,.kicker{text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:800;color:var(--green)}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px}.hero h1{font:500 clamp(4rem,8vw,7.7rem)/.88 var(--serif);letter-spacing:-.075em;margin:20px 0 27px}.hero h1 em{color:var(--green);font-weight:400}.hero-lede{font:1.25rem/1.55 var(--serif);max-width:560px;color:#434c45}.cta{display:inline-flex;margin-top:22px;padding:13px 19px;background:var(--green);color:#fffefa;text-decoration:none;border-radius:3px;font-weight:700;font-size:.88rem}.hero-art{position:relative;min-height:420px;display:grid;place-items:center}.orbit{position:absolute;width:min(390px,90%);aspect-ratio:1;border-radius:50%;border:1px solid #b8c4ad;box-shadow:0 0 0 36px #e9e5d966,0 0 0 72px #e9e5d944}.portrait{position:relative;width:255px;height:325px;background:#d8dfc2;border-radius:48% 48% 7px 7px;overflow:hidden;display:flex;align-items:end;justify-content:center}.portrait svg{width:100%;height:100%}.art-note{position:absolute;right:0;bottom:20px;max-width:150px;font-size:.75rem;color:var(--muted);border-left:2px solid var(--green);padding-left:12px}.hero-quote{border-top:1px solid var(--line);padding-top:18px;margin-top:54px;font:italic 1.05rem var(--serif);color:var(--muted)}.hero-quote small{display:block;font: .72rem var(--sans);margin-top:8px;letter-spacing:.08em;text-transform:uppercase}.section{padding:88px 16px;border-top:1px solid var(--line)}.section .wrap{width:min(1160px,100%)}.section-head{display:grid;grid-template-columns:.45fr 1fr;gap:30px;margin-bottom:45px}.section h2{font:500 clamp(2.4rem,4vw,4rem)/1.05 var(--serif);letter-spacing:-.05em;margin:8px 0}.section-intro{max-width:650px;color:var(--muted);font-size:1.04rem}.bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{padding:26px;background:var(--white);border:1px solid var(--line)}.card h3{font:500 1.45rem var(--serif);margin:0 0 10px}.card p{margin:0;color:#535c55}.factline{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}.factline b{color:var(--green);min-width:76px}.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.timeline:before{content:"";position:absolute;height:1px;left:0;right:0;top:13px;background:#a9b4a4}.moment{position:relative;padding-top:37px}.moment:before{content:"";position:absolute;top:7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--lime);border:2px solid var(--green)}.moment time{font-weight:800;color:var(--green);font-size:.82rem}.moment h3{font:500 1.22rem var(--serif);margin:8px 0}.moment p{font-size:.89rem;color:var(--muted);margin:0}.dark{background:#203b34;color:#f6f3ed}.dark .kicker{color:var(--lime)}.dark .section-intro,.dark .card p{color:#d0d8cf}.dark .card{background:#2a4941;border-color:#496157}.dark .card h3{color:#fff}.idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.idea-grid .card{min-height:190px}.example{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center;margin-top:25px;padding:28px;background:#dce7cf;color:var(--ink)}.example .kicker{color:var(--green)}.example h3{font:500 1.6rem var(--serif);margin:0}.equation{font:1.1rem var(--serif);padding:15px 0;border-bottom:1px solid #b6c6ae}.steps{color:#46524a;font-size:.92rem}.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.impact-card{padding:24px 22px;border-top:3px solid var(--green);background:var(--white)}.impact-card strong{display:block;font:500 1.35rem var(--serif);margin-bottom:9px}.impact-card p{color:var(--muted);margin:0}.podcast{display:grid;grid-template-columns:.75fr 1.25fr;background:#e9e5d9;padding:30px;gap:30px;align-items:center}.playmark{height:160px;background:var(--green);display:grid;place-items:center;color:var(--lime);font-size:3rem}.podcast audio{width:100%;margin:12px 0}.missing{font-size:.8rem;color:#545d55}.quiz{background:var(--white);border:1px solid var(--line);padding:28px;max-width:800px}.quiz-q{padding:20px 0;border-bottom:1px solid var(--line)}.quiz-q h3{font:500 1.2rem var(--serif);margin:0 0 12px}.option{display:block;padding:8px 10px;margin:5px 0;border:1px solid transparent;cursor:pointer;border-radius:3px}.option:hover{background:var(--paper)}.option input{accent-color:var(--green);margin-right:8px}.option.is-correct{background:#e6f0dc;border-color:#8ba678}.option.is-incorrect{background:#f6e6e2;border-color:#c17b6b}.quiz-feedback{margin:10px 10px 0;padding:10px 12px;border-left:3px solid var(--green);background:#eef3e9;font-size:.9rem}.quiz-feedback.is-incorrect{border-left-color:#a34f3e;background:#f7ece8}.quiz-actions{display:flex;align-items:center;gap:16px;margin-top:22px}.quiz-actions button{border:0;padding:12px 17px;background:var(--green);color:white;cursor:pointer}.result{font-weight:700;color:var(--green)}.curios{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.curios .card{background:var(--cream)}.sources{padding-left:20px}.sources li{padding:10px 0 10px 6px;color:#505950}.sources a{color:var(--green);text-underline-offset:3px}.ai-table{width:100%;border-collapse:collapse;background:var(--white);font-size:.9rem}.ai-table th,.ai-table td{padding:13px;text-align:left;border:1px solid var(--line)}.ai-table th{background:var(--cream)}.footer{padding:35px 0 50px;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}.footer b{color:var(--ink)}
-    @media(max-width:800px){.nav{height:auto;min-height:64px;align-items:flex-start;padding:17px 0;flex-direction:column}.nav nav{width:100%;gap:17px;padding-bottom:4px}.hero{padding:50px 0 65px}.hero-grid,.section-head,.example{grid-template-columns:1fr}.hero-art{min-height:350px}.hero-quote{margin-top:25px}.timeline{grid-template-columns:repeat(2,1fr);row-gap:30px}.idea-grid,.impact-grid,.curios{grid-template-columns:1fr 1fr}.section{padding:65px 16px}.podcast{grid-template-columns:1fr}.playmark{height:110px}}
-    @media(max-width:520px){.wrap{width:calc(100% - 32px)}.hero-grid,.bio-grid{grid-template-columns:1fr}.hero h1{font-size:4.3rem}.hero-art{min-height:310px}.portrait{width:205px;height:270px}.orbit{width:255px;box-shadow:0 0 0 24px #e9e5d966,0 0 0 48px #e9e5d944}.timeline,.idea-grid,.impact-grid,.curios{grid-template-columns:1fr}.timeline:before{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}.moment{padding:0 0 0 30px}.moment:before{left:0;top:4px}.section-head{gap:10px}.section{padding:55px 16px}.ai-table{font-size:.78rem}.ai-table th,.ai-table td{padding:8px}}
+    :root{
+      --paper:#f3f6f1;
+      --ink:#202724;
+      --muted:#535c55;
+      --green:#245548;
+      --green-dark:#1a3d34;
+      --lime:#d5e65a;
+      --amber:#c87a28;
+      --line:#d8d8cc;
+      --cream:#e5ebe3;
+      --white:#fffefa;
+      --serif:Georgia,'Times New Roman',serif;
+      --sans:'Avenir Next','Segoe UI',system-ui,sans-serif;
+      --mono:'SFMono-Regular',Consolas,monospace;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:86px}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;transition:background .3s ease}
+    a{color:inherit}
+    button{font:inherit;cursor:pointer}
+    .wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+
+    /* Topbar & Switcher */
+    .topbar{position:sticky;top:0;z-index:20;background:#f3f6f1eb;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 0}
+    .brand{font-weight:800;letter-spacing:-.04em;text-decoration:none;font-size:1.05rem;display:flex;align-items:center;gap:8px}
+    .brand span{color:var(--green)}
+    .switcher{display:inline-flex;background:var(--cream);padding:4px;border-radius:6px;border:1px solid var(--line);gap:4px}
+    .switch-btn{border:0;background:transparent;padding:7px 14px;border-radius:4px;font-size:.82rem;font-weight:700;color:var(--muted);transition:all .2s ease;display:flex;align-items:center;gap:6px}
+    .switch-btn.active{background:var(--green);color:#fffefa;box-shadow:0 2px 6px rgba(36,85,72,.2)}
+    .switch-btn[data-person="ramanujan"].active{background:#2d473e;border-bottom:2px solid var(--lime)}
+    nav{display:flex;align-items:center;gap:18px;overflow:auto;white-space:nowrap}
+    nav a{text-decoration:none;font-size:.78rem;font-weight:600;color:var(--muted);transition:color .2s}
+    nav a:hover{color:var(--green)}
+
+    /* View Visibility & Transitions */
+    .person-view{display:none;animation:fadeIn .35s ease}
+    .person-view.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Hero */
+    .hero{padding:64px 0 84px;overflow:hidden}
+    .eyebrow,.kicker{text-transform:uppercase;letter-spacing:.15em;font-size:.72rem;font-weight:800;color:var(--green)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:36px}
+    .hero h1{font:500 clamp(3.6rem,7.2vw,6.8rem)/.9 var(--serif);letter-spacing:-.06em;margin:14px 0 24px}
+    .hero h1 em{color:var(--green);font-weight:400;font-style:italic}
+    .hero-lede{font:1.22rem/1.55 var(--serif);max-width:560px;color:#434c45}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .cta{display:inline-flex;align-items:center;gap:6px;padding:13px 20px;background:var(--green);color:#fffefa;text-decoration:none;border-radius:4px;font-weight:700;font-size:.88rem;border:0;transition:background .2s}
+    .cta:hover{background:var(--green-dark)}
+    .cta-secondary{background:var(--white);color:var(--ink);border:1px solid var(--line)}
+    .cta-secondary:hover{background:var(--cream)}
+    .hero-art{position:relative;min-height:400px;display:grid;place-items:center}
+    .orbit{position:absolute;width:min(380px,90%);aspect-ratio:1;border-radius:50%;border:1px solid #b8c4ad;box-shadow:0 0 0 34px #e9e5d966,0 0 0 68px #e9e5d944}
+    .portrait{position:relative;width:255px;height:325px;background:#d8dfc2;border-radius:48% 48% 7px 7px;overflow:hidden;display:flex;align-items:end;justify-content:center;box-shadow:0 12px 28px rgba(32,39,36,.08)}
+    .portrait svg{width:100%;height:100%}
+    .art-note{position:absolute;right:0;bottom:16px;max-width:155px;font-size:.74rem;color:var(--muted);border-left:2px solid var(--green);padding-left:12px;background:rgba(243,246,241,.85)}
+    .hero-quote{border-top:1px solid var(--line);padding-top:18px;margin-top:48px;font:italic 1.05rem var(--serif);color:var(--muted)}
+    .hero-quote small{display:block;font:.72rem var(--sans);margin-top:8px;letter-spacing:.08em;text-transform:uppercase}
+
+    /* Sections */
+    .section{padding:80px 16px;border-top:1px solid var(--line)}
+    .section .wrap{width:min(1160px,100%)}
+    .section-head{display:grid;grid-template-columns:.45fr 1fr;gap:30px;margin-bottom:42px}
+    .section h2{font:500 clamp(2.2rem,3.8vw,3.6rem)/1.06 var(--serif);letter-spacing:-.04em;margin:6px 0}
+    .section-intro{max-width:650px;color:var(--muted);font-size:1.04rem}
+    .bio-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .card{padding:26px;background:var(--white);border:1px solid var(--line);border-radius:4px}
+    .card h3{font:500 1.4rem var(--serif);margin:0 0 10px}
+    .card p{margin:0;color:#535c55}
+    .factline{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-top:1px solid var(--line)}
+    .factline b{color:var(--green);min-width:95px}
+
+    /* Interactive Timeline */
+    .timeline-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .tl-pill{padding:6px 14px;border-radius:20px;border:1px solid var(--line);background:var(--white);font-size:.8rem;font-weight:600;color:var(--muted);transition:all .2s}
+    .tl-pill.active,.tl-pill:hover{background:var(--green);color:#fffefa;border-color:var(--green)}
+    .timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .timeline:before{content:"";position:absolute;height:1px;left:0;right:0;top:13px;background:#a9b4a4}
+    .moment{position:relative;padding:36px 14px 14px;border-radius:4px;transition:background .2s,transform .2s;cursor:pointer}
+    .moment:hover,.moment.highlighted{background:var(--white);box-shadow:0 4px 14px rgba(0,0,0,.04)}
+    .moment:before{content:"";position:absolute;top:7px;left:14px;width:12px;height:12px;border-radius:50%;background:var(--lime);border:2px solid var(--green);transition:transform .2s}
+    .moment.highlighted:before{transform:scale(1.35);background:var(--green)}
+    .moment time{font-weight:800;color:var(--green);font-size:.82rem}
+    .moment h3{font:500 1.18rem var(--serif);margin:6px 0}
+    .moment p{font-size:.88rem;color:var(--muted);margin:0}
+
+    /* Dark Math Section & Interactive Lab */
+    .dark{background:#203b34;color:#f6f3ed}
+    .dark .kicker{color:var(--lime)}
+    .dark .section-intro,.dark .card p{color:#d0d8cf}
+    .dark .card{background:#2a4941;border-color:#496157}
+    .dark .card h3{color:#fff}
+    .idea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .idea-grid .card{min-height:185px}
+
+    /* Interactive Explorers */
+    .lab-box{margin-top:28px;padding:28px;background:#dce7cf;color:var(--ink);border-radius:6px}
+    .lab-header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px;border-bottom:1px solid #b6c6ae;padding-bottom:14px}
+    .lab-header h3{font:500 1.55rem var(--serif);margin:0}
+    .lab-tabs{display:flex;flex-wrap:wrap;gap:8px}
+    .lab-tab{padding:8px 14px;border:1px solid var(--green);background:transparent;color:var(--green);border-radius:4px;font-size:.82rem;font-weight:700;transition:all .2s}
+    .lab-tab.active{background:var(--green);color:#fffefa}
+    .lab-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:24px;align-items:center}
+    .equation-display{font:1.15rem var(--serif);padding:16px;background:var(--white);border-left:4px solid var(--green);border-radius:3px;margin-bottom:12px}
+    .steps{color:#354139;font-size:.94rem}
+    .calc-controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:14px 0}
+    .calc-input{padding:9px 12px;border:1px solid #9eb196;border-radius:4px;font-size:.95rem;width:120px;background:var(--white)}
+    .calc-btn{padding:9px 16px;background:var(--green);color:#fffefa;border:0;border-radius:4px;font-weight:700;font-size:.85rem}
+    .calc-output{padding:14px;background:var(--white);border-radius:4px;font-family:var(--mono);font-size:.88rem;border:1px solid #b6c6ae;min-height:54px}
+
+    /* Impact & Podcast */
+    .impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .impact-card{padding:24px 22px;border-top:3px solid var(--green);background:var(--white);border-radius:0 0 4px 4px}
+    .impact-card strong{display:block;font:500 1.32rem var(--serif);margin-bottom:9px}
+    .impact-card p{color:var(--muted);margin:0}
+    .podcast{display:grid;grid-template-columns:.75fr 1.25fr;background:#e9e5d9;padding:30px;gap:30px;align-items:center;border-radius:6px}
+    .playmark{height:160px;background:var(--green);display:grid;place-items:center;color:var(--lime);font-size:3rem;border-radius:4px;flex-direction:column;gap:6px}
+    .playmark span{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#fffefa}
+    .podcast audio{width:100%;margin:12px 0}
+    .transcript-toggle{background:transparent;border:1px solid var(--green);color:var(--green);padding:7px 14px;border-radius:4px;font-size:.82rem;font-weight:700;margin-top:6px}
+    .transcript-box{display:none;margin-top:14px;padding:16px;background:var(--white);border-left:3px solid var(--green);font-size:.9rem;color:#3d4640;max-height:220px;overflow-y:auto}
+    .transcript-box.open{display:block}
+
+    /* Comparison Section */
+    .compare-table{width:100%;border-collapse:collapse;background:var(--white);font-size:.92rem;border-radius:4px;overflow:hidden}
+    .compare-table th,.compare-table td{padding:15px 16px;text-align:left;border:1px solid var(--line);vertical-align:top}
+    .compare-table th{background:var(--green);color:#fffefa;font-family:var(--serif);font-weight:500;font-size:1.05rem}
+    .compare-table tr:nth-child(even){background:#f9fbf8}
+
+    /* Interactive Quiz */
+    .quiz-tabs{display:flex;gap:10px;margin-bottom:18px}
+    .quiz{background:var(--white);border:1px solid var(--line);padding:28px;max-width:840px;border-radius:6px}
+    .quiz-q{padding:18px 0;border-bottom:1px solid var(--line)}
+    .quiz-q:last-of-type{border-bottom:0}
+    .quiz-q h3{font:500 1.16rem var(--serif);margin:0 0 12px}
+    .option{display:block;padding:9px 12px;margin:5px 0;border:1px solid transparent;cursor:pointer;border-radius:4px;transition:background .15s}
+    .option:hover{background:var(--paper)}
+    .option input{accent-color:var(--green);margin-right:8px}
+    .option.is-correct{background:#e6f0dc;border-color:#8ba678}
+    .option.is-incorrect{background:#f6e6e2;border-color:#c17b6b}
+    .quiz-feedback{margin:10px 10px 0;padding:10px 12px;border-left:3px solid var(--green);background:#eef3e9;font-size:.9rem}
+    .quiz-feedback.is-incorrect{border-left-color:#a34f3e;background:#f7ece8}
+    .quiz-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:22px}
+    .quiz-actions button{border:0;padding:12px 18px;background:var(--green);color:white;border-radius:4px;font-weight:700}
+    .quiz-actions button.reset-btn{background:var(--cream);color:var(--ink);border:1px solid var(--line)}
+    .result{font-weight:700;color:var(--green)}
+
+    /* Curios, Sources, AI Table, Footer */
+    .curios{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .curios .card{background:var(--cream)}
+    .sources{padding-left:20px}
+    .sources li{padding:8px 0 8px 6px;color:#505950}
+    .sources a{color:var(--green);text-underline-offset:3px}
+    .ai-table{width:100%;border-collapse:collapse;background:var(--white);font-size:.9rem}
+    .ai-table th,.ai-table td{padding:13px;text-align:left;border:1px solid var(--line)}
+    .ai-table th{background:var(--cream)}
+    .footer{padding:35px 0 50px;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted)}
+    .footer b{color:var(--ink)}
+
+    @media(max-width:860px){
+      .nav{flex-direction:column;align-items:flex-start;padding:12px 0}
+      .nav nav{width:100%;padding-bottom:4px}
+      .hero-grid,.section-head,.lab-grid{grid-template-columns:1fr}
+      .hero{padding:44px 0 60px}
+      .hero-art{min-height:330px}
+      .timeline{grid-template-columns:repeat(2,1fr);row-gap:24px}
+      .idea-grid,.impact-grid,.curios{grid-template-columns:1fr 1fr}
+      .podcast{grid-template-columns:1fr}
+      .playmark{height:110px}
+    }
+    @media(max-width:540px){
+      .wrap{width:calc(100% - 32px)}
+      .bio-grid,.timeline,.idea-grid,.impact-grid,.curios{grid-template-columns:1fr}
+      .timeline:before{left:6px;right:auto;top:0;bottom:0;width:1px;height:auto}
+      .moment{padding:4px 0 12px 28px}
+      .moment:before{left:0;top:8px}
+      .compare-table{display:block;overflow-x:auto}
+    }
   </style>
 </head>
-  <body>
-  <header class="topbar"><div class="wrap nav"><a class="brand" href="#inicio">IDEAS <span>EN MOVIMIENTO</span></a><nav aria-label="Navegación principal"><a href="#vida">Vida</a><a href="#tiempo">Cronología</a><a href="#matematicas">Matemáticas</a><a href="#hoy">Hoy</a><a href="#podcast">Podcast</a><a href="#juego">Juego</a><a href="#fuentes">Fuentes</a></nav></div></header>
-  <main>
-    <section class="hero" id="inicio"><div class="wrap"><div class="hero-grid"><div><h1>Emmy<br><em>Noether</em></h1><p class="hero-lede">¿Qué tiene que ver la simetría con que la energía no desaparezca? Una idea de Emmy Noether conecta la forma de las leyes de la naturaleza con aquello que permanece constante.</p><a class="cta" href="#matematicas">Explorar su idea <span aria-hidden="true"> ↘</span></a></div><div class="hero-art"><div class="orbit"></div><div class="portrait" role="img" aria-label="Ilustración geométrica inspirada en un retrato histórico de Emmy Noether"><svg viewBox="0 0 300 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="390" fill="#d8dfc2"/><circle cx="151" cy="144" r="72" fill="#d9ae88"/><path d="M78 150Q65 72 133 56Q208 37 225 114Q200 94 184 77Q151 104 82 107Z" fill="#51473e"/><path d="M84 127Q100 91 145 87Q190 84 214 120L205 182Q194 218 151 225Q106 218 92 183Z" fill="#d9ae88"/><path d="M104 142q14-9 27 0M166 142q14-9 27 0" fill="none" stroke="#403c37" stroke-width="5" stroke-linecap="round"/><path d="M145 150l-5 26 13 2M133 190q19 13 39-1" fill="none" stroke="#9a6e57" stroke-width="4" stroke-linecap="round"/><path d="M64 390q4-119 87-150 93 31 89 150" fill="#365d4d"/><path d="M125 245l27 37 27-37" fill="#f3eee2"/><path d="M151 282v108" stroke="#d5e65a" stroke-width="3"/><circle cx="234" cy="77" r="9" fill="#d5e65a"/><path d="M39 88h35M54 71v35M233 258h31m-16-16v32" stroke="#536d55" stroke-width="2"/></svg></div><div class="art-note">Ilustración vectorial original para esta página. No es una fotografía histórica.</div></div></div><p class="hero-quote">Su intuición central: una simetría continua puede revelar una cantidad que se conserva.<small>Síntesis conceptual del teorema de Noether · no es una cita literal</small></p></div></section>
-    <section class="section" id="vida"><div class="wrap"><div class="section-head"><div><h2>Una vida entre ideas y fronteras</h2></div><p class="section-intro">Amalie Emmy Noether nació en Erlangen, Alemania, en 1882. Su padre, Max Noether, era profesor de matemáticas. En una época en que las universidades alemanas apenas abrían sus aulas a las mujeres, ella convirtió su curiosidad por la matemática en una obra que transformó dos disciplinas.</p></div><div class="bio-grid"><article class="card"><h3>Aprender y enseñar</h3><p>Estudió en Erlangen y obtuvo el doctorado en 1907 con una tesis sobre invariantes algebraicos. Trabajó allí varios años sin un cargo formal. En 1915 llegó a Göttingen, invitada por David Hilbert y Felix Klein para contribuir a problemas matemáticos relacionados con la relatividad.</p></article><article class="card"><h3>Un nuevo lenguaje</h3><p>En 1919 obtuvo la habilitación que le permitió enseñar oficialmente. Su manera de buscar estructuras y relaciones generales ayudó a dar forma al álgebra abstracta moderna. En 1933, las leyes antisemitas del régimen nazi le quitaron su puesto; emigró a Estados Unidos y enseñó en Bryn Mawr. Murió en 1935.</p></article></div><div class="factline"><b>Contexto</b><span>Su carrera transcurrió durante cambios profundos en las universidades europeas: el acceso de las mujeres a la educación superior, la Primera Guerra Mundial y el ascenso del nazismo.</span></div><div class="factline"><b>Comunidad</b><span>Además de publicar resultados, Noether formó estudiantes y colegas. Su seminario en Göttingen se volvió un espacio de trabajo matemático colaborativo e intenso.</span></div></div></section>
-    <section class="section" id="tiempo"><div class="wrap"><div class="section-head"><div><h2>Hitos de una trayectoria</h2></div><p class="section-intro">Una cronología breve para ubicar su formación, sus aportes y el contexto político que cambió su vida.</p></div><div class="timeline"><article class="moment"><time>1882</time><h3>Nace en Erlangen</h3><p>Crece en una familia judía alemana vinculada a las matemáticas.</p></article><article class="moment"><time>1907</time><h3>Doctorado</h3><p>Obtiene el doctorado en matemáticas en la Universidad de Erlangen.</p></article><article class="moment"><time>1915</time><h3>Llega a Göttingen</h3><p>Se incorpora al entorno matemático que estudia problemas de relatividad.</p></article><article class="moment"><time>1918</time><h3>Teorema de Noether</h3><p>Publica su resultado sobre simetrías y leyes de conservación.</p></article><article class="moment"><time>1919</time><h3>Habilitación</h3><p>Puede enseñar oficialmente en la Universidad de Göttingen.</p></article><article class="moment"><time>1920–1921</time><h3>Álgebra abstracta</h3><p>Publica trabajos influyentes sobre ideales y anillos.</p></article><article class="moment"><time>1933</time><h3>Emigra a EE. UU.</h3><p>Tras ser expulsada de su puesto por el régimen nazi, enseña en Bryn Mawr.</p></article><article class="moment"><time>1935</time><h3>Su legado continúa</h3><p>Muere en Pensilvania a los 53 años; su trabajo sigue activo en matemáticas y física.</p></article></div></div></section>
-    <section class="section dark" id="matematicas"><div class="wrap"><div class="section-head"><div><h2>Ver estructura donde antes había casos</h2></div><p class="section-intro">Noether cambió la pregunta: en vez de estudiar cada ecuación por separado, buscó las estructuras que organizaban familias enteras de problemas.</p></div><div class="idea-grid"><article class="card"><h3>Teorema de Noether</h3><p>En sistemas físicos descritos por una acción, cada simetría continua de esa acción está asociada a una cantidad conservada. Es una conexión profunda entre la forma de las leyes y lo que permanece constante.</p></article><article class="card"><h3>Álgebra abstracta</h3><p>Su trabajo sobre anillos, ideales y módulos ayudó a organizar el álgebra con definiciones estructurales. El enfoque noetheriano permite estudiar propiedades generales sin depender de un ejemplo particular.</p></article><article class="card"><h3>Un método de trabajo</h3><p>Impulsó una matemática basada en relaciones, transformaciones y estructuras. Su influencia alcanzó el álgebra conmutativa, la geometría algebraica y la física teórica.</p></article></div><div class="example"><div><h3>Ejemplo: ¿Por qué se conserva la energía?</h3><p>Imagina un sistema físico cuyas reglas no cambian si repetimos el experimento un instante después.</p></div><div><div class="equation">Simetría de traslación en el tiempo → energía total conservada</div><div class="steps"><b>1.</b> La física del sistema es la misma hoy y un segundo después: hay simetría temporal.<br><b>2.</b> Es una simetría continua.<br><b>3.</b> El teorema asocia a esa simetría una cantidad conservada: la energía.<br><br><b>Otras dos parejas:</b> simetría al mover el sistema en el espacio → momento lineal; simetría al rotarlo → momento angular.</div></div></div><p style="font-size:.83rem;color:#d0d8cf;margin-top:18px">La demostración completa usa el formalismo de la acción y las ecuaciones de Euler–Lagrange. Aquí mostramos la idea y sus correspondencias más conocidas.</p></div></section>
-    <section class="section" id="hoy"><div class="wrap"><div class="section-head"><div><h2>La simetría sigue trabajando</h2></div><p class="section-intro">Las ideas de Noether forman parte del lenguaje con que la física moderna describe sistemas, desde partículas hasta el universo a gran escala.</p></div><div class="impact-grid"><article class="impact-card"><strong>Física de partículas</strong><p>Las simetrías ayudan a organizar teorías de campos y a deducir cantidades conservadas en modelos de partículas.</p></article><article class="impact-card"><strong>Relatividad y cosmología</strong><p>Las relaciones entre simetrías y conservación son herramientas centrales para formular y analizar teorías gravitatorias.</p></article><article class="impact-card"><strong>Matemáticas actuales</strong><p>Los conceptos de anillo noetheriano y módulo noetheriano aparecen en álgebra conmutativa y geometría algebraica, áreas usadas en investigación contemporánea.</p></article></div></div></section>
-    <section class="section" id="podcast"><div class="wrap"><div class="section-head"><div><h2>Escucha las simetrías</h2></div><p class="section-intro">Un resumen de audio para recorrer su historia, sus aportes y la conexión entre simetría y conservación.</p></div><div class="podcast"><div class="playmark" aria-hidden="true">♫</div><div><h3 style="font:500 1.7rem var(--serif);margin:8px 0">Podcast: Emmy Noether y las simetrías del universo</h3><p>Audio Overview creado con apoyo de NotebookLM.</p><audio controls preload="metadata"><source src="Emmy_Noether_y_las_simetrías_del_universo.m4a" type="audio/mp4">Tu navegador no permite reproducir este audio.</audio></div></div></div></section>
-    <section class="section" id="juego"><div class="wrap"><div class="section-head"><div><h2>Comprueba lo que descubriste</h2></div><p class="section-intro">Responde las preguntas y revisa tu resultado. Cada respuesta correcta conecta un dato con una idea clave.</p></div><form class="quiz" id="quiz"><div class="quiz-q"><h3>1. ¿Qué relación establece el teorema de Noether?</h3><label class="option"><input type="radio" name="q1" value="a"> Entre simetrías continuas y cantidades conservadas</label><label class="option"><input type="radio" name="q1" value="b"> Entre números primos y números pares</label><label class="option"><input type="radio" name="q1" value="c"> Entre la masa y el color de un objeto</label></div><div class="quiz-q"><h3>2. Si las leyes físicas no cambian con el tiempo, ¿qué cantidad se conserva?</h3><label class="option"><input type="radio" name="q2" value="a"> El momento angular</label><label class="option"><input type="radio" name="q2" value="b"> La energía</label><label class="option"><input type="radio" name="q2" value="c"> La temperatura ambiente</label></div><div class="quiz-q"><h3>3. ¿En qué ciudad nació Emmy Noether?</h3><label class="option"><input type="radio" name="q3" value="a"> Erlangen</label><label class="option"><input type="radio" name="q3" value="b"> París</label><label class="option"><input type="radio" name="q3" value="c"> Princeton</label></div><div class="quiz-q"><h3>4. ¿Qué área matemática transformó con su enfoque estructural?</h3><label class="option"><input type="radio" name="q4" value="a"> Álgebra abstracta</label><label class="option"><input type="radio" name="q4" value="b"> Trigonometría escolar exclusivamente</label><label class="option"><input type="radio" name="q4" value="c"> Estadística descriptiva</label></div><div class="quiz-actions"><button type="submit">Revisar respuestas</button><span class="result" id="result" aria-live="polite"></span></div></form></div></section>
-    <section class="section" id="curiosidades"><div class="wrap"><div class="section-head"><div><h2>Pequeños detalles, grandes ideas</h2></div><p class="section-intro">Tres pistas para acercarse a Emmy Noether más allá de las fechas y los títulos.</p></div><div class="curios"><article class="card"><h3>Antes de las matemáticas</h3><p>En 1900 obtuvo una certificación para enseñar inglés y francés en escuelas para niñas; luego decidió dedicarse a las matemáticas.</p></article><article class="card"><h3>Una red internacional</h3><p>Tras emigrar, enseñó en Bryn Mawr College y también visitó el Institute for Advanced Study en Princeton.</p></article><article class="card"><h3>Una influencia generosa</h3><p>Sus estudiantes y colegas difundieron su enfoque estructural, y la tradición del álgebra moderna todavía lleva su huella.</p></article></div></div></section>
-    <section class="section" id="fuentes"><div class="wrap"><div class="section-head"><div><h2>Lecturas y verificaciones</h2></div><p class="section-intro">Referencias consultadas para contrastar fechas, trayectoria y aportes. Formato APA simplificado; las páginas web se consultaron el 16 de noviembre de 2026.</p></div><ol class="sources"><li>Georg-August-Universität Göttingen. (s. f.). <i>Emmy Noether (1882 to 1935)</i>. <a href="https://www.uni-goettingen.de/en/74993.html" target="_blank" rel="noreferrer">uni-goettingen.de</a>.</li><li>Institute for Advanced Study. (2017). <i>Emmy Noether’s Paradise</i>. <a href="https://www.ias.edu/ideas/2017/emmy-noether%E2%80%99s-paradise" target="_blank" rel="noreferrer">ias.edu</a>.</li><li>Institute for Advanced Study. (2024, 1 de octubre). <i>Emmy Noether selected as Legacy Honoree of American Academy of Arts &amp; Sciences</i>. <a href="https://www.ias.edu/news/emmy-noether-legacy-honoree-american-academy-arts-sciences" target="_blank" rel="noreferrer">ias.edu</a>.</li><li>University of St Andrews, School of Mathematics and Statistics. (s. f.). <i>Emmy Noether (1882–1935)</i>. MacTutor History of Mathematics. <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/" target="_blank" rel="noreferrer">mathshistory.st-andrews.ac.uk</a>.</li><li>Sussman, G. J., &amp; Wisdom, J. (2013). <i>Structure and interpretation of classical mechanics</i> (2.ª ed., § 1.8.5). MIT Press. <a href="https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/9579/sicm_edition_2.zip/chapter001.html" target="_blank" rel="noreferrer">MIT Press</a>.</li><li>American Academy of Arts and Sciences. (s. f.). <i>Amalie Emmy Noether</i>. <a href="https://www.amacad.org/person/amalie-emmy-noether" target="_blank" rel="noreferrer">amacad.org</a>.</li><li>Weyl, H. (1935). Emmy Noether. <i>Scripta Mathematica, 3</i>, 201–220.</li></ol></div></section>
-    <section class="section" id="ia"><div class="wrap"><div class="section-head"><div><h2>IA como apoyo, verificación humana</h2></div><p class="section-intro">La herramienta puede ayudar a organizar y explicar, pero las fechas, afirmaciones y fuentes se deben revisar antes de presentar.</p></div><table class="ai-table"><thead><tr><th>Herramienta</th><th>Uso</th><th>Revisión humana</th></tr></thead><tbody><tr><td>ChatGPT</td><td>Apoyo para organizar la información, redactar explicaciones y crear el HTML del sitio.</td><td>Contrastar biografía y conceptos con las referencias enlazadas; corregir imprecisiones.</td></tr><tr><td>NotebookLM</td><td>Consulta de fuentes y generación del Audio Overview.</td><td>Contrastar fechas y conceptos con las fuentes documentales.</td></tr><tr><td>Integrante: Stiven Robledo Garcia</td><td>Selección de contenidos, revisión y presentación del proyecto.</td><td>Selección de contenidos, revisión y presentación del proyecto.</td></tr></tbody></table></div></section>
+<body>
+  <header class="topbar">
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">MENTES <span>EN MOVIMIENTO</span></a>
+      <div class="switcher" role="tablist" aria-label="Seleccionar matemático">
+        <button class="switch-btn active" role="tab" aria-selected="true" data-person="noether" onclick="selectPerson('noether')">Emmy Noether</button>
+        <button class="switch-btn" role="tab" aria-selected="false" data-person="ramanujan" onclick="selectPerson('ramanujan')">Srinivasa Ramanujan</button>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#vida">Vida</a>
+        <a href="#tiempo">Cronología</a>
+        <a href="#matematicas">Laboratorio</a>
+        <a href="#hoy">Legado</a>
+        <a href="#comparativa">Comparativa</a>
+        <a href="#podcast">Podcast</a>
+        <a href="#juego">Quiz</a>
+        <a href="#fuentes">Fuentes</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- ==================== VISTA 1: EMMY NOETHER ==================== -->
+    <div id="view-noether" class="person-view active">
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Simetría y Álgebra Abstracta · 1882–1935</span>
+              <h1>Emmy<br><em>Noether</em></h1>
+              <p class="hero-lede">¿Qué tiene que ver la simetría con que la energía no desaparezca? Una idea de Emmy Noether conecta la forma de las leyes de la naturaleza con aquello que permanece constante.</p>
+              <div class="hero-actions">
+                <a class="cta" href="#matematicas">Explorar laboratorio ↘</a>
+                <button class="cta cta-secondary" onclick="selectPerson('ramanujan')">Conocer a Ramanujan →</button>
+              </div>
+            </div>
+            <div class="hero-art">
+              <div class="orbit"></div>
+              <div class="portrait" role="img" aria-label="Ilustración geométrica inspirada en un retrato histórico de Emmy Noether">
+                <svg viewBox="0 0 300 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="390" fill="#d8dfc2"/>
+                  <circle cx="151" cy="144" r="72" fill="#d9ae88"/>
+                  <path d="M78 150Q65 72 133 56Q208 37 225 114Q200 94 184 77Q151 104 82 107Z" fill="#51473e"/>
+                  <path d="M84 127Q100 91 145 87Q190 84 214 120L205 182Q194 218 151 225Q106 218 92 183Z" fill="#d9ae88"/>
+                  <path d="M104 142q14-9 27 0M166 142q14-9 27 0" fill="none" stroke="#403c37" stroke-width="5" stroke-linecap="round"/>
+                  <path d="M145 150l-5 26 13 2M133 190q19 13 39-1" fill="none" stroke="#9a6e57" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M64 390q4-119 87-150 93 31 89 150" fill="#365d4d"/>
+                  <path d="M125 245l27 37 27-37" fill="#f3eee2"/>
+                  <path d="M151 282v108" stroke="#d5e65a" stroke-width="3"/>
+                  <circle cx="234" cy="77" r="9" fill="#d5e65a"/>
+                  <path d="M39 88h35M54 71v35M233 258h31m-16-16v32" stroke="#536d55" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="art-note">Ilustración vectorial original para esta página. No es una fotografía histórica.</div>
+            </div>
+          </div>
+          <p class="hero-quote">Su intuición central: una simetría continua puede revelar una cantidad que se conserva.<small>Síntesis conceptual del teorema de Noether · no es una cita literal</small></p>
+        </div>
+      </section>
+
+      <section class="section" id="vida">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Biografía</span><h2>Una vida entre ideas y fronteras</h2></div>
+            <p class="section-intro">Amalie Emmy Noether nació en Erlangen, Alemania, en 1882. Su padre, Max Noether, era profesor de matemáticas. En una época en que las universidades alemanas apenas abrían sus aulas a las mujeres, ella convirtió su curiosidad por la matemática en una obra que transformó dos disciplinas.</p>
+          </div>
+          <div class="bio-grid">
+            <article class="card">
+              <h3>Aprender y enseñar</h3>
+              <p>Estudió en Erlangen y obtuvo el doctorado en 1907 con una tesis sobre invariantes algebraicos. Trabajó allí varios años sin un cargo formal. En 1915 llegó a Göttingen, invitada por David Hilbert y Felix Klein para contribuir a problemas matemáticos relacionados con la relatividad.</p>
+            </article>
+            <article class="card">
+              <h3>Un nuevo lenguaje</h3>
+              <p>En 1919 obtuvo la habilitación que le permitió enseñar oficialmente. Su manera de buscar estructuras y relaciones generales ayudó a dar forma al álgebra abstracta moderna. En 1933, las leyes antisemitas del régimen nazi le quitaron su puesto; emigró a Estados Unidos y enseñó en Bryn Mawr. Murió en 1935.</p>
+            </article>
+          </div>
+          <div class="factline"><b>Contexto</b><span>Su carrera transcurrió durante cambios profundos en las universidades europeas: el acceso de las mujeres a la educación superior, la Primera Guerra Mundial y el ascenso del nazismo.</span></div>
+          <div class="factline"><b>Comunidad</b><span>Además de publicar resultados, Noether formó estudiantes y colegas. Su seminario en Göttingen se volvió un espacio de trabajo matemático colaborativo e intenso.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="tiempo">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Recorrido histórico</span><h2>Hitos de una trayectoria</h2></div>
+            <p class="section-intro">Haz clic en cualquier hito para resaltarlo o filtra por etapa para explorar su formación, sus aportes y el contexto político que cambió su vida.</p>
+          </div>
+          <div class="timeline-controls" id="noether-tl-filters">
+            <button class="tl-pill active" onclick="filterTimeline('noether', 'all', this)">Todos los hitos</button>
+            <button class="tl-pill" onclick="filterTimeline('noether', 'formacion', this)">Formación (1882–1915)</button>
+            <button class="tl-pill" onclick="filterTimeline('noether', 'aportes', this)">Aportes clave (1918–1921)</button>
+            <button class="tl-pill" onclick="filterTimeline('noether', 'exilio', this)">Exilio y legado (1933–1935)</button>
+          </div>
+          <div class="timeline" id="noether-timeline">
+            <article class="moment" data-stage="formacion" onclick="highlightMoment(this)"><time>1882</time><h3>Nace en Erlangen</h3><p>Crece en una familia judía alemana vinculada a las matemáticas.</p></article>
+            <article class="moment" data-stage="formacion" onclick="highlightMoment(this)"><time>1907</time><h3>Doctorado</h3><p>Obtiene el doctorado en matemáticas en la Universidad de Erlangen.</p></article>
+            <article class="moment" data-stage="formacion" onclick="highlightMoment(this)"><time>1915</time><h3>Llega a Göttingen</h3><p>Se incorpora al entorno matemático que estudia problemas de relatividad.</p></article>
+            <article class="moment" data-stage="aportes" onclick="highlightMoment(this)"><time>1918</time><h3>Teorema de Noether</h3><p>Publica su resultado sobre simetrías y leyes de conservación.</p></article>
+            <article class="moment" data-stage="aportes" onclick="highlightMoment(this)"><time>1919</time><h3>Habilitación</h3><p>Puede enseñar oficialmente en la Universidad de Göttingen.</p></article>
+            <article class="moment" data-stage="aportes" onclick="highlightMoment(this)"><time>1920–1921</time><h3>Álgebra abstracta</h3><p>Publica trabajos influyentes sobre ideales y anillos.</p></article>
+            <article class="moment" data-stage="exilio" onclick="highlightMoment(this)"><time>1933</time><h3>Emigra a EE. UU.</h3><p>Tras ser expulsada de su puesto por el régimen nazi, enseña en Bryn Mawr.</p></article>
+            <article class="moment" data-stage="exilio" onclick="highlightMoment(this)"><time>1935</time><h3>Su legado continúa</h3><p>Muere en Pensilvania a los 53 años; su trabajo sigue activo en matemáticas y física.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="matematicas">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Ideas y Simulador</span><h2>Ver estructura donde antes había casos</h2></div>
+            <p class="section-intro">Noether cambió la pregunta: en vez de estudiar cada ecuación por separado, buscó las estructuras que organizaban familias enteras de problemas.</p>
+          </div>
+          <div class="idea-grid">
+            <article class="card"><h3>Teorema de Noether</h3><p>En sistemas físicos descritos por una acción, cada simetría continua de esa acción está asociada a una cantidad conservada. Es una conexión profunda entre la forma de las leyes y lo que permanece constante.</p></article>
+            <article class="card"><h3>Álgebra abstracta</h3><p>Su trabajo sobre anillos, ideales y módulos ayudó a organizar el álgebra con definiciones estructurales. El enfoque noetheriano permite estudiar propiedades generales sin depender de un ejemplo particular.</p></article>
+            <article class="card"><h3>Un método de trabajo</h3><p>Impulsó una matemática basada en relaciones, transformaciones y estructuras. Su influencia alcanzó el álgebra conmutativa, la geometría algebraica y la física teórica.</p></article>
+          </div>
+
+          <div class="lab-box">
+            <div class="lab-header">
+              <h3>Simulador Interactivo: Simetría → Conservación</h3>
+              <div class="lab-tabs">
+                <button class="lab-tab active" onclick="setNoetherSymmetry('tiempo', this)">Traslación Temporal</button>
+                <button class="lab-tab" onclick="setNoetherSymmetry('espacio', this)">Traslación Espacial</button>
+                <button class="lab-tab" onclick="setNoetherSymmetry('rotacion', this)">Rotación Espacial</button>
+              </div>
+            </div>
+            <div class="lab-grid">
+              <div>
+                <h4 id="noether-sym-title" style="font:500 1.35rem var(--serif);margin:0 0 8px">Simetría en el tiempo</h4>
+                <p id="noether-sym-desc" style="margin:0;color:#3d4640">Imagina un sistema físico cuyas reglas fundamentales no cambian si repetimos el mismo experimento hoy, mañana o dentro de un siglo.</p>
+              </div>
+              <div>
+                <div class="equation-display" id="noether-sym-eq">Invariancia ante t → t + Δt &nbsp;⟹&nbsp; Conservación de la Energía Total (E)</div>
+                <div class="steps" id="noether-sym-steps">
+                  <b>1. Transformación continua:</b> Desplazar el reloj del experimento no altera el Lagrangiano del sistema.<br>
+                  <b>2. Consecuencia física:</b> La energía no se crea ni se destruye, solo se transforma.<br>
+                  <b>3. Ejemplo cotidiano:</b> Un péndulo ideal intercambia energía cinética y potencial manteniendo constante su suma.
+                </div>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:.83rem;color:#d0d8cf;margin-top:18px">La demostración completa usa el formalismo de la acción y las ecuaciones de Euler–Lagrange. Aquí mostramos la idea y sus correspondencias más conocidas.</p>
+        </div>
+      </section>
+
+      <section class="section" id="hoy">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Impacto contemporáneo</span><h2>La simetría sigue trabajando</h2></div>
+            <p class="section-intro">Las ideas de Noether forman parte del lenguaje con que la física moderna describe sistemas, desde partículas hasta el universo a gran escala.</p>
+          </div>
+          <div class="impact-grid">
+            <article class="impact-card"><strong>Física de partículas</strong><p>Las simetrías ayudan a organizar teorías de campos y a deducir cantidades conservadas en modelos de partículas, como la carga eléctrica.</p></article>
+            <article class="impact-card"><strong>Relatividad y cosmología</strong><p>Las relaciones entre simetrías y conservación son herramientas centrales para formular y analizar teorías gravitatorias.</p></article>
+            <article class="impact-card"><strong>Matemáticas actuales</strong><p>Los conceptos de anillo noetheriano y módulo noetheriano aparecen en álgebra conmutativa y geometría algebraica contemporáneas.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="podcast">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Recurso sonoro</span><h2>Escucha las simetrías</h2></div>
+            <p class="section-intro">Un resumen de audio para recorrer su historia, sus aportes y la conexión entre simetría y conservación.</p>
+          </div>
+          <div class="podcast">
+            <div class="playmark" aria-hidden="true">♫<span>Audio Overview</span></div>
+            <div>
+              <h3 style="font:500 1.65rem var(--serif);margin:4px 0">Podcast: Emmy Noether y las simetrías del universo</h3>
+              <p style="margin:6px 0">Audio Overview creado con apoyo de NotebookLM.</p>
+              <audio controls preload="metadata">
+                <source src="Emmy_Noether_y_las_simetrías_del_universo.m4a" type="audio/mp4">
+                Tu navegador no permite reproducir este audio.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="curiosidades">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Apuntes biográficos</span><h2>Pequeños detalles, grandes ideas</h2></div>
+            <p class="section-intro">Tres pistas para acercarse a Emmy Noether más allá de las fechas y los títulos.</p>
+          </div>
+          <div class="curios">
+            <article class="card"><h3>Antes de las matemáticas</h3><p>En 1900 obtuvo una certificación para enseñar inglés y francés en escuelas para niñas; luego decidió dedicarse por completo a las matemáticas.</p></article>
+            <article class="card"><h3>Una red internacional</h3><p>Tras emigrar, enseñó en Bryn Mawr College y también visitó el Institute for Advanced Study en Princeton.</p></article>
+            <article class="card"><h3>Una influencia generosa</h3><p>Sus estudiantes y colegas difundieron su enfoque estructural, y la tradición del álgebra moderna todavía lleva su huella.</p></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== VISTA 2: SRINIVASA RAMANUJAN ==================== -->
+    <div id="view-ramanujan" class="person-view">
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Intuición Infinita y Teoría de Números · 1887–1920</span>
+              <h1>Srinivasa<br><em>Ramanujan</em></h1>
+              <p class="hero-lede">¿Cómo puede un joven autodidacta sin formación universitaria formal sorprender a los mejores matemáticos del mundo con miles de fórmulas inéditas sobre números y series infinitas?</p>
+              <div class="hero-actions">
+                <a class="cta" href="#matematicas">Explorar laboratorio ↘</a>
+                <button class="cta cta-secondary" onclick="selectPerson('noether')">← Volver a Emmy Noether</button>
+              </div>
+            </div>
+            <div class="hero-art">
+              <div class="orbit"></div>
+              <div class="portrait" role="img" aria-label="Ilustración geométrica inspirada en Srinivasa Ramanujan">
+                <svg viewBox="0 0 300 390" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <rect width="300" height="390" fill="#d8dfc2"/>
+                  <!-- Halo matemático -->
+                  <circle cx="150" cy="145" r="88" fill="none" stroke="#245548" stroke-width="1.5" stroke-dasharray="6 4"/>
+                  <!-- Cabello -->
+                  <path d="M84 140Q80 65 150 62Q220 65 216 140Q205 95 150 92Q95 95 84 140Z" fill="#232624"/>
+                  <!-- Rostro -->
+                  <path d="M90 128Q92 215 150 225Q208 215 210 128Q195 94 150 92Q105 94 90 128Z" fill="#b8835a"/>
+                  <!-- Marca tradicional discreta (Tilaka) -->
+                  <path d="M150 112v14" stroke="#f3eee2" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="150" cy="121" r="1.8" fill="#a34f3e"/>
+                  <!-- Cejas y ojos expresivos -->
+                  <path d="M106 138q15-7 28 0M166 138q14-7 28 0" fill="none" stroke="#232624" stroke-width="4.5" stroke-linecap="round"/>
+                  <circle cx="121" cy="147" r="4" fill="#232624"/>
+                  <circle cx="179" cy="147" r="4" fill="#232624"/>
+                  <!-- Nariz y boca -->
+                  <path d="M150 146l-4 24 10 2M134 191q16 9 32 0" fill="none" stroke="#784e32" stroke-width="3.5" stroke-linecap="round"/>
+                  <!-- Traje formal de Cambridge -->
+                  <path d="M58 390q6-122 92-150 86 28 92 150" fill="#203b34"/>
+                  <path d="M126 242l24 58 24-58" fill="#fffefa"/>
+                  <path d="M145 256h10l4 44-9 10-9-10z" fill="#245548"/>
+                  <!-- Detalles geométricos -->
+                  <text x="34" y="84" fill="#245548" font-family="Georgia,serif" font-size="18" font-weight="bold">1729</text>
+                  <text x="226" y="275" fill="#245548" font-family="Georgia,serif" font-size="22">∑ ∞</text>
+                  <circle cx="238" cy="78" r="8" fill="#d5e65a"/>
+                </svg>
+              </div>
+              <div class="art-note">Ilustración vectorial original para esta página. No es una fotografía histórica.</div>
+            </div>
+          </div>
+          <p class="hero-quote">«Una ecuación para mí no tiene sentido a menos que exprese un pensamiento de Dios.»<small>Frase atribuida a Srinivasa Ramanujan · Sobre la belleza intrínseca de los números</small></p>
+        </div>
+      </section>
+
+      <section class="section" id="vida">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Biografía</span><h2>Un genio autodidacta entre dos mundos</h2></div>
+            <p class="section-intro">Srinivasa Ramanujan nació en 1887 en Erode, India. Desde muy joven sintió una fascinación extraordinaria por los números, llenando cuadernos enteros con fórmulas, patrones y teoremas desarrollados por cuenta propia, al margen de los métodos académicos tradicionales.</p>
+          </div>
+          <div class="bio-grid">
+            <article class="card">
+              <h3>Cuadernos en solitario</h3>
+              <p>Su pasión absoluta por las matemáticas hizo que descuidara otras asignaturas universitarias, perdiendo becas y enfrentando serias dificultades económicas. Aun así, jamás dejó de investigar: trabajaba como oficinista en Madrás mientras registraba miles de resultados en sus cuadernos personales.</p>
+            </article>
+            <article class="card">
+              <h3>La carta que cambió su destino</h3>
+              <p>En 1913 escribió al matemático británico G. H. Hardy, de la Universidad de Cambridge, enviándole una selección de sus teoremas. Hardy quedó asombrado ante un talento sin precedentes y lo invitó a Inglaterra. Juntos produjeron avances revolucionarios antes de que su salud se deteriorara gravemente.</p>
+            </article>
+          </div>
+          <div class="factline"><b>Reconocimiento</b><span>En 1918 fue elegido miembro de la prestigiosa Royal Society de Londres y del Trinity College de Cambridge, convirtiéndose en uno de los primeros indios en recibir tal distinción.</span></div>
+          <div class="factline"><b>Legado vivo</b><span>Falleció en India en 1920 con apenas 32 años, pero sus cuadernos —incluido el célebre «Cuaderno Perdido»— continuaron inspirando demostraciones matemáticas durante décadas.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="tiempo">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Recorrido histórico</span><h2>Hitos de una trayectoria</h2></div>
+            <p class="section-intro">Haz clic en cualquier momento para destacarlo o filtra por etapa para recorrer su camino desde India hasta Cambridge.</p>
+          </div>
+          <div class="timeline-controls" id="ramanujan-tl-filters">
+            <button class="tl-pill active" onclick="filterTimeline('ramanujan', 'all', this)">Todos los hitos</button>
+            <button class="tl-pill" onclick="filterTimeline('ramanujan', 'india', this)">Infancia y cuadernos (1887–1913)</button>
+            <button class="tl-pill" onclick="filterTimeline('ramanujan', 'cambridge', this)">Cambridge y Hardy (1914–1918)</button>
+            <button class="tl-pill" onclick="filterTimeline('ramanujan', 'legado', this)">Regreso y legado (1919–1920)</button>
+          </div>
+          <div class="timeline" id="ramanujan-timeline">
+            <article class="moment" data-stage="india" onclick="highlightMoment(this)"><time>1887</time><h3>Nace en Erode</h3><p>Crece en el sur de la India mostrando desde niño una intuición numérica excepcional.</p></article>
+            <article class="moment" data-stage="india" onclick="highlightMoment(this)"><time>1903–1909</time><h3>Cuadernos propios</h3><p>Estudia por su cuenta y llena cuadernos con miles de identidades y series.</p></article>
+            <article class="moment" data-stage="india" onclick="highlightMoment(this)"><time>1913</time><h3>Carta a G. H. Hardy</h3><p>Envía sus resultados a Cambridge; Hardy reconoce de inmediato su genialidad.</p></article>
+            <article class="moment" data-stage="cambridge" onclick="highlightMoment(this)"><time>1914</time><h3>Viaje a Inglaterra</h3><p>Se traslada al Trinity College de Cambridge para colaborar directamente con Hardy.</p></article>
+            <article class="moment" data-stage="cambridge" onclick="highlightMoment(this)"><time>1916–1917</time><h3>Particiones y Tau</h3><p>Desarrolla fórmulas asintóticas para particiones de enteros y funciones modulares.</p></article>
+            <article class="moment" data-stage="cambridge" onclick="highlightMoment(this)"><time>1918</time><h3>Royal Society</h3><p>Es elegido Fellow of the Royal Society, máximo honor científico británico.</p></article>
+            <article class="moment" data-stage="legado" onclick="highlightMoment(this)"><time>1919</time><h3>Regreso a India</h3><p>Vuelve a su país natal afectado por una grave enfermedad, pero sigue creando matemáticas.</p></article>
+            <article class="moment" data-stage="legado" onclick="highlightMoment(this)"><time>1920</time><h3>Fallece a los 32 años</h3><p>Deja un tesoro de cuadernos que aún hoy alimenta la investigación en teoría de números.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section dark" id="matematicas">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Ideas y Explorador Numérico</span><h2>La intuición detrás del infinito</h2></div>
+            <p class="section-intro">Ramanujan poseía una capacidad extraordinaria para ver relaciones ocultas entre números enteros, fracciones continuas y series infinitas convergentes.</p>
+          </div>
+          <div class="idea-grid">
+            <article class="card"><h3>Teoría de números y 1729</h3><p>Descubrió propiedades profundas de los números enteros y formas cuadráticas. El famoso número «taxi» 1729 es el menor entero positivo expresable como suma de dos cubos positivos de dos maneras distintas.</p></article>
+            <article class="card"><h3>Particiones de enteros</h3><p>Junto a Hardy creó el método del círculo para calcular de cuántas formas puede descomponerse un número entero como suma de enteros positivos, un problema clave en combinatoria y física estadística.</p></article>
+            <article class="card"><h3>Series infinitas y π</h3><p>Descubrió series hipergeométricas de convergencia ultrarrápida para calcular π. Cada término nuevo de una de sus fórmulas añade alrededor de 8 dígitos decimales exactos.</p></article>
+          </div>
+
+          <div class="lab-box">
+            <div class="lab-header">
+              <h3>Laboratorio Interactivo de Ramanujan</h3>
+              <div class="lab-tabs">
+                <button class="lab-tab active" onclick="setRamLab('taxicab', this)">Número 1729 (Taxicab)</button>
+                <button class="lab-tab" onclick="setRamLab('particiones', this)">Particiones p(n)</button>
+                <button class="lab-tab" onclick="setRamLab('pi', this)">Serie rápida para π</button>
+              </div>
+            </div>
+
+            <!-- Panel 1: 1729 -->
+            <div id="ram-panel-taxicab" class="lab-grid">
+              <div>
+                <h4 style="font:500 1.35rem var(--serif);margin:0 0 8px">La anécdota del taxi 1729</h4>
+                <p style="margin:0;color:#3d4640">Cuando G. H. Hardy visitó a Ramanujan en el hospital y mencionó que había llegado en el taxi número 1729 —un número que le parecía insípido—, Ramanujan respondió al instante que era fascinante.</p>
+              </div>
+              <div>
+                <div class="equation-display">1729 = 1³ + 12³ = 9³ + 10³</div>
+                <div class="steps">
+                  <b>Comprobación:</b><br>
+                  • Primera descomposición: 1 + 1728 = <b>1729</b><br>
+                  • Segunda descomposición: 729 + 1000 = <b>1729</b><br>
+                  • Es el menor entero positivo con esta propiedad (llamado <i>Ta(2)</i>).
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Particiones interactivas -->
+            <div id="ram-panel-particiones" class="lab-grid" style="display:none">
+              <div>
+                <h4 style="font:500 1.35rem var(--serif);margin:0 0 8px">Calculadora de Particiones p(n)</h4>
+                <p style="margin:0;color:#3d4640">Una partición de <i>n</i> es una forma de escribir <i>n</i> como suma de enteros positivos sin importar el orden. Por ejemplo, para n = 4 existen 5 particiones: 4, 3+1, 2+2, 2+1+1, 1+1+1+1.</p>
+              </div>
+              <div>
+                <div class="calc-controls">
+                  <label for="part-n" style="font-weight:700;font-size:.9rem">Elige n (1 a 15):</label>
+                  <input id="part-n" class="calc-input" type="number" min="1" max="15" value="5">
+                  <button class="calc-btn" onclick="computePartitions()">Calcular p(n)</button>
+                </div>
+                <div class="calc-output" id="part-output">p(5) = 7 particiones → [5], [4+1], [3+2], [3+1+1], [2+2+1], [2+1+1+1], [1+1+1+1+1]</div>
+              </div>
+            </div>
+
+            <!-- Panel 3: Serie de Pi -->
+            <div id="ram-panel-pi" class="lab-grid" style="display:none">
+              <div>
+                <h4 style="font:500 1.35rem var(--serif);margin:0 0 8px">Aproximación ultrarrápida a π (1914)</h4>
+                <p style="margin:0;color:#3d4640">Ramanujan halló una serie infinita que converge hacia 1/π a una velocidad asombrosa. Los algoritmos modernos de cómputo de récords de π se basan en generalizaciones de esta identidad.</p>
+              </div>
+              <div>
+                <div class="equation-display" style="font-size:1rem">1/π = (2√2 / 9801) · ∑ [(4k)!(1103 + 26390k)] / [(k!)⁴ 396⁴ᵏ]</div>
+                <div class="calc-controls">
+                  <button class="calc-btn" onclick="showPiTerm(0)">Con 1 término (k=0)</button>
+                  <button class="calc-btn" onclick="showPiTerm(1)">Con 2 términos (k=0,1)</button>
+                </div>
+                <div class="calc-output" id="pi-output">k = 0: π ≈ 3.1415927300133055 (¡7 decimales exactos en el primer paso!)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="hoy">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Impacto contemporáneo</span><h2>De los cuadernos a la ciencia actual</h2></div>
+            <p class="section-intro">Casi un siglo después, las fórmulas de Ramanujan siguen abriendo caminos en áreas que ni siquiera existían en su época.</p>
+          </div>
+          <div class="impact-grid">
+            <article class="impact-card"><strong>Criptografía y seguridad</strong><p>Sus trabajos sobre curvas elípticas y formas modulares sustentan herramientas esenciales en la teoría moderna de números aplicada a la criptografía.</p></article>
+            <article class="impact-card"><strong>Física de agujeros negros</strong><p>Sus funciones «mock theta» (falsas funciones theta), escritas en su último año de vida, se utilizan hoy para estudiar la entropía cuántica de los agujeros negros.</p></article>
+            <article class="impact-card"><strong>Algoritmos computacionales</strong><p>Sus series hipergeométricas permiten calcular millones de millones de dígitos de π con eficiencia computacional extraordinaria.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="podcast">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Guion y Relato Sonoro</span><h2>Mentes que cambiaron el mundo</h2></div>
+            <p class="section-intro">Episodio dedicado a Srinivasa Ramanujan: su infancia en India, su carta a G. H. Hardy, la historia del 1729 y su legado eterno.</p>
+          </div>
+          <div class="podcast">
+            <div class="playmark" aria-hidden="true">🎙️<span>Episodio Podcast</span></div>
+            <div>
+              <h3 style="font:500 1.65rem var(--serif);margin:4px 0">Podcast: Srinivasa Ramanujan — El genio de los números</h3>
+              <p style="margin:6px 0">Relato narrativo sobre cómo la curiosidad y el compartir ideas transforman el conocimiento humano.</p>
+              <button class="transcript-toggle" onclick="toggleTranscript()">Leer guion completo del episodio</button>
+              <div class="transcript-box" id="ram-transcript">
+                <p><strong>Narrador:</strong> ¿Sabías que existió un hombre que sorprendió a algunos de los mejores matemáticos del mundo sin haber completado una formación universitaria en matemáticas? Su nombre era Srinivasa Ramanujan...</p>
+                <p><strong>Biografía y carta a Hardy:</strong> Nacido en 1887 en India, llenaba cuadernos con fórmulas y descubrimientos. En 1913 escribió al matemático británico G. H. Hardy en Cambridge, quien quedó impresionado por su talento y lo invitó a Inglaterra.</p>
+                <p><strong>Anécdota del 1729:</strong> Hardy comentó que el número del taxi 1729 parecía aburrido. Ramanujan respondió que es el menor entero positivo expresable como suma de dos cubos positivos de dos maneras diferentes: 1³ + 12³ y 9³ + 10³.</p>
+                <p><strong>Reflexión final:</strong> El talento puede aparecer en lugares inesperados, pero necesita oportunidades y compartir ideas para florecer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="curiosidades">
+        <div class="wrap">
+          <div class="section-head">
+            <div><span class="kicker">Apuntes biográficos</span><h2>Tres rasgos de una mente única</h2></div>
+            <p class="section-intro">Detalles que muestran su forma particular de pensar, crear y colaborar.</p>
+          </div>
+          <div class="curios">
+            <article class="card"><h3>El libro de Carr</h3><p>A los 16 años obtuvo una copia de la <i>Synopsis of Elementary Results in Pure Mathematics</i> de G. S. Carr, un compendio de ~5.000 teoremas sin demostraciones detalladas que moldeó su estilo directo.</p></article>
+            <article class="card"><h3>El Cuaderno Perdido</h3><p>En 1976, el matemático George Andrews halló en el Trinity College una caja con 138 páginas manuscritas de su último año, con más de 600 fórmulas inéditas.</p></article>
+            <article class="card"><h3>Compartir para trascender</h3><p>Enviar aquella carta a Cambridge en 1913 demostró que comunicar las ideas propias puede abrir puertas históricas para toda la humanidad.</p></article>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==================== SECCIONES COMPARTIDAS ==================== -->
+    <section class="section" id="comparativa">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Diálogo entre dos mentes</span><h2>Noether y Ramanujan frente a frente</h2></div>
+          <p class="section-intro">Contemporáneos (1882–1935 y 1887–1920), ambos transformaron las matemáticas desde estilos opuestos y complementarios: la abstracción estructural frente a la intuición numérica.</p>
+        </div>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th style="width:20%">Dimensión</th>
+              <th style="width:40%">Emmy Noether (1882–1935)</th>
+              <th style="width:40%">Srinivasa Ramanujan (1887–1920)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Origen y formación</b></td>
+              <td>Erlangen, Alemania. Formación universitaria formal y doctorado, aunque enfrentó barreras de género y persecución política.</td>
+              <td>Erode, India. Autodidacta casi por completo; desarrolló miles de resultados en cuadernos antes de llegar a Cambridge.</td>
+            </tr>
+            <tr>
+              <td><b>Estilo matemático</b></td>
+              <td><b>Estructural y conceptual:</b> buscaba principios generales, axiomas y simetrías que unificaran familias enteras de problemas.</td>
+              <td><b>Intuitivo y concreto:</b> descubría identidades exactas, patrones profundos en números particulares y series infinitas.</td>
+            </tr>
+            <tr>
+              <td><b>Aportes centrales</b></td>
+              <td>Teorema de Noether (simetría ↔ conservación), anillos noetherianos y fundamentos del álgebra abstracta moderna.</td>
+              <td>Teoría analítica de números, particiones de enteros, fracciones continuas, funciones modulares y series para π.</td>
+            </tr>
+            <tr>
+              <td><b>Impacto hoy</b></td>
+              <td>Física teórica, relatividad, modelo estándar de partículas y geometría algebraica.</td>
+              <td>Criptografía, algoritmos de cómputo de alta precisión y física teórica de agujeros negros.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="juego">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Autoevaluación Interactiva</span><h2>Comprueba lo que descubriste</h2></div>
+          <p class="section-intro">Elige el cuestionario de Emmy Noether o el de Srinivasa Ramanujan, responde las 4 preguntas y recibe retroalimentación inmediata.</p>
+        </div>
+
+        <div class="quiz-tabs">
+          <button class="lab-tab active" id="qtab-noether" onclick="switchQuiz('noether')">Quiz: Emmy Noether</button>
+          <button class="lab-tab" id="qtab-ramanujan" onclick="switchQuiz('ramanujan')">Quiz: Srinivasa Ramanujan</button>
+        </div>
+
+        <!-- Quiz Noether -->
+        <form class="quiz" id="quiz-noether">
+          <div class="quiz-q">
+            <h3>1. ¿Qué relación establece el teorema de Noether?</h3>
+            <label class="option"><input type="radio" name="nq1" value="a"> Entre simetrías continuas y cantidades conservadas</label>
+            <label class="option"><input type="radio" name="nq1" value="b"> Entre números primos y números pares</label>
+            <label class="option"><input type="radio" name="nq1" value="c"> Entre la masa y el color de un objeto</label>
+          </div>
+          <div class="quiz-q">
+            <h3>2. Si las leyes físicas no cambian con el tiempo, ¿qué cantidad se conserva?</h3>
+            <label class="option"><input type="radio" name="nq2" value="a"> El momento angular</label>
+            <label class="option"><input type="radio" name="nq2" value="b"> La energía</label>
+            <label class="option"><input type="radio" name="nq2" value="c"> La temperatura ambiente</label>
+          </div>
+          <div class="quiz-q">
+            <h3>3. ¿En qué ciudad nació Emmy Noether?</h3>
+            <label class="option"><input type="radio" name="nq3" value="a"> Erlangen</label>
+            <label class="option"><input type="radio" name="nq3" value="b"> París</label>
+            <label class="option"><input type="radio" name="nq3" value="c"> Princeton</label>
+          </div>
+          <div class="quiz-q">
+            <h3>4. ¿Qué área matemática transformó con su enfoque estructural?</h3>
+            <label class="option"><input type="radio" name="nq4" value="a"> Álgebra abstracta</label>
+            <label class="option"><input type="radio" name="nq4" value="b"> Trigonometría escolar exclusivamente</label>
+            <label class="option"><input type="radio" name="nq4" value="c"> Estadística descriptiva</label>
+          </div>
+          <div class="quiz-actions">
+            <button type="submit">Revisar respuestas</button>
+            <button type="button" class="reset-btn" onclick="resetQuiz('noether')">Reiniciar</button>
+            <span class="result" id="result-noether" aria-live="polite"></span>
+          </div>
+        </form>
+
+        <!-- Quiz Ramanujan -->
+        <form class="quiz" id="quiz-ramanujan" style="display:none">
+          <div class="quiz-q">
+            <h3>1. ¿A qué matemático de la Universidad de Cambridge escribió Ramanujan en 1913?</h3>
+            <label class="option"><input type="radio" name="rq1" value="a"> G. H. Hardy</label>
+            <label class="option"><input type="radio" name="rq1" value="b"> David Hilbert</label>
+            <label class="option"><input type="radio" name="rq1" value="c"> Isaac Newton</label>
+          </div>
+          <div class="quiz-q">
+            <h3>2. ¿Por qué es famoso el número 1729 en la anécdota del taxi?</h3>
+            <label class="option"><input type="radio" name="rq2" value="a"> Porque es el mayor número primo conocido</label>
+            <label class="option"><input type="radio" name="rq2" value="b"> Porque es el menor entero positivo expresable como suma de dos cubos positivos de dos maneras distintas</label>
+            <label class="option"><input type="radio" name="rq2" value="c"> Porque es divisible entre todos los dígitos del 1 al 9</label>
+          </div>
+          <div class="quiz-q">
+            <h3>3. ¿En qué áreas realizó Ramanujan contribuciones fundamentales?</h3>
+            <label class="option"><input type="radio" name="rq3" value="a"> Teoría de números, series infinitas, fracciones continuas y particiones</label>
+            <label class="option"><input type="radio" name="rq3" value="b"> Mecánica de fluidos y aerodinámica naval</label>
+            <label class="option"><input type="radio" name="rq3" value="c"> Geometría euclidiana plana exclusivamente</label>
+          </div>
+          <div class="quiz-q">
+            <h3>4. ¿Qué importante reconocimiento científico recibió en 1918?</h3>
+            <label class="option"><input type="radio" name="rq4" value="a"> Fue elegido miembro de la Royal Society</label>
+            <label class="option"><input type="radio" name="rq4" value="b"> Ganó el Premio Nobel de Física</label>
+            <label class="option"><input type="radio" name="rq4" value="c"> Fue nombrado rector de la Universidad de Berlín</label>
+          </div>
+          <div class="quiz-actions">
+            <button type="submit">Revisar respuestas</button>
+            <button type="button" class="reset-btn" onclick="resetQuiz('ramanujan')">Reiniciar</button>
+            <span class="result" id="result-ramanujan" aria-live="polite"></span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" id="fuentes">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Bibliografía verificada</span><h2>Lecturas y verificaciones</h2></div>
+          <p class="section-intro">Referencias consultadas para contrastar fechas, trayectoria y aportes de ambos matemáticos. Formato APA simplificado.</p>
+        </div>
+        <ol class="sources">
+          <li>Georg-August-Universität Göttingen. (s. f.). <i>Emmy Noether (1882 to 1935)</i>. <a href="https://www.uni-goettingen.de/en/74993.html" target="_blank" rel="noreferrer">uni-goettingen.de</a>.</li>
+          <li>Institute for Advanced Study. (2017). <i>Emmy Noether’s Paradise</i>. <a href="https://www.ias.edu/ideas/2017/emmy-noether%E2%80%99s-paradise" target="_blank" rel="noreferrer">ias.edu</a>.</li>
+          <li>University of St Andrews, School of Mathematics and Statistics. (s. f.). <i>Emmy Noether (1882–1935)</i>. MacTutor History of Mathematics. <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Noether_Emmy/" target="_blank" rel="noreferrer">mathshistory.st-andrews.ac.uk</a>.</li>
+          <li>University of St Andrews, School of Mathematics and Statistics. (s. f.). <i>Srinivasa Aiyangar Ramanujan (1887–1920)</i>. MacTutor History of Mathematics. <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Ramanujan/" target="_blank" rel="noreferrer">mathshistory.st-andrews.ac.uk</a>.</li>
+          <li>Hardy, G. H. (1920). Obituary Notice: Srinivasa Ramanujan. <i>Proceedings of the Royal Society A</i>, 99, xiii–xxix.</li>
+          <li>Kanigel, R. (1991). <i>The Man Who Knew Infinity: A Life of the Genius Ramanujan</i>. Charles Scribner's Sons.</li>
+          <li>Sussman, G. J., &amp; Wisdom, J. (2013). <i>Structure and interpretation of classical mechanics</i> (2.ª ed., § 1.8.5). MIT Press.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="ia">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">Metodología</span><h2>IA como apoyo, verificación humana</h2></div>
+          <p class="section-intro">Las herramientas digitales ayudan a estructurar e ilustrar, pero cada fecha, fórmula y referencia se contrasta antes de presentar.</p>
+        </div>
+        <table class="ai-table">
+          <thead>
+            <tr><th>Herramienta / Integrante</th><th>Uso</th><th>Revisión humana</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Asistencia IA (LLM)</td><td>Apoyo para organizar la información, redactar explicaciones, programar interactividad HTML/JS y estructurar diapositivas.</td><td>Contrastar biografía y conceptos de Noether y Ramanujan con fuentes académicas.</td></tr>
+            <tr><td>NotebookLM / Guion Podcast</td><td>Consulta de fuentes y generación de narrativas de divulgación científica.</td><td>Verificar exactitud histórica de fechas, teoremas y citas.</td></tr>
+            <tr><td>Integrante: Stiven Robledo Garcia</td><td>Selección de contenidos, curaduría, verificación y presentación del proyecto.</td><td>Selección de contenidos, curaduría, verificación y presentación del proyecto.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
-  <footer class="footer"><div class="wrap"><b>Electiva · Proyecto final</b><br>Stiven Robledo Garcia · UNIMINUTO<br><span>Emmy Noether (1882–1935) · Página de divulgación elaborada con apoyo de IA.</span></div></footer>
+
+  <footer class="footer">
+    <div class="wrap">
+      <b>Electiva · Proyecto Final</b><br>
+      Stiven Robledo Garcia · UNIMINUTO<br>
+      <span>Emmy Noether (1882–1935) &amp; Srinivasa Ramanujan (1887–1920) · Página interactiva de divulgación matemática.</span>
+    </div>
+  </footer>
+
   <script>
-    document.getElementById('quiz').addEventListener('submit',function(e){e.preventDefault();const keys={q1:'a',q2:'b',q3:'a',q4:'a'};let score=0;for(const [q,answer] of Object.entries(keys)){const question=this.querySelector('input[name="'+q+'"]').closest('.quiz-q');const selected=question.querySelector('input[name="'+q+'"]:checked');question.querySelectorAll('.option').forEach(label=>label.classList.remove('is-correct','is-incorrect'));const oldFeedback=question.querySelector('.quiz-feedback');if(oldFeedback)oldFeedback.remove();const correctInput=question.querySelector('input[value="'+answer+'"]');const correctLabel=correctInput.closest('.option');correctLabel.classList.add('is-correct');const feedback=document.createElement('p');feedback.className='quiz-feedback';if(selected&&selected.value===answer){score++;feedback.textContent='¡Correcta!';}else{feedback.classList.add('is-incorrect');if(selected){selected.closest('.option').classList.add('is-incorrect');const chosen=selected.closest('.option').textContent.trim();feedback.textContent='Incorrecta. Elegiste: '+chosen+'. Respuesta correcta: '+correctLabel.textContent.trim()+'.';}else{feedback.textContent='Sin responder. Respuesta correcta: '+correctLabel.textContent.trim()+'.';}}question.appendChild(feedback);}const missed=4-score;const result=document.getElementById('result');result.textContent=score+' de 4 correctas. '+(missed===0?'¡Excelente, todas correctas!':'Revisa las '+missed+' pregunta'+(missed===1?' que fallaste.':'s que fallaste; debajo aparece cada respuesta correcta.'));});
+    // 1. Cambio de matemático principal
+    function selectPerson(person) {
+      document.querySelectorAll('.switch-btn').forEach(btn => {
+        const isTarget = btn.dataset.person === person;
+        btn.classList.toggle('active', isTarget);
+        btn.setAttribute('aria-selected', isTarget);
+      });
+      document.querySelectorAll('.person-view').forEach(view => view.classList.remove('active'));
+      document.getElementById('view-' + person).classList.add('active');
+      switchQuiz(person);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 2. Cronología interactiva
+    function filterTimeline(person, stage, btn) {
+      const container = document.getElementById(person + '-timeline');
+      const pills = document.getElementById(person + '-tl-filters').querySelectorAll('.tl-pill');
+      pills.forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      container.querySelectorAll('.moment').forEach(m => {
+        m.style.display = (stage === 'all' || m.dataset.stage === stage) ? 'block' : 'none';
+      });
+    }
+
+    function highlightMoment(el) {
+      el.parentElement.querySelectorAll('.moment').forEach(m => m.classList.remove('highlighted'));
+      el.classList.add('highlighted');
+    }
+
+    // 3. Simulador Noether
+    const noetherData = {
+      tiempo: {
+        title: 'Simetría en el tiempo',
+        desc: 'Imagina un sistema físico cuyas reglas fundamentales no cambian si repetimos el mismo experimento hoy, mañana o dentro de un siglo.',
+        eq: 'Invariancia ante t → t + Δt  ⟹  Conservación de la Energía Total (E)',
+        steps: '<b>1. Transformación continua:</b> Desplazar el reloj del experimento no altera las ecuaciones del sistema.<br><b>2. Consecuencia física:</b> La energía total permanece constante.<br><b>3. Ejemplo:</b> Un péndulo sin fricción intercambia energía cinética y potencial sin perder su suma.'
+      },
+      espacio: {
+        title: 'Simetría de traslación espacial',
+        desc: 'Las leyes de la física en un laboratorio aislado son idénticas sin importar si el laboratorio está en Medellín, Londres o en una nave espacial lejos de campos externos.',
+        eq: 'Invariancia ante x → x + Δx  ⟹  Conservación del Momento Lineal (p)',
+        steps: '<b>1. Transformación continua:</b> Mover todo el sistema en el espacio no cambia su dinámica interna.<br><b>2. Consecuencia física:</b> El momento lineal total (m·v) se conserva en ausencia de fuerzas externas.<br><b>3. Ejemplo:</b> El retroceso de un patinador al lanzar un balón sobre hielo.'
+      },
+      rotacion: {
+        title: 'Simetría de rotación espacial',
+        desc: 'El espacio isotrópico no tiene una dirección privilegiada: girar un sistema físico aislado no modifica las leyes que lo gobiernan.',
+        eq: 'Invariancia ante θ → θ + Δθ  ⟹  Conservación del Momento Angular (L)',
+        steps: '<b>1. Transformación continua:</b> Rotar el sistema alrededor de un eje mantiene invariante la acción.<br><b>2. Consecuencia física:</b> El momento angular total se mantiene constante.<br><b>3. Ejemplo:</b> Un patinador gira más rápido al acercar los brazos a su cuerpo.'
+      }
+    };
+
+    function setNoetherSymmetry(key, btn) {
+      btn.parentElement.querySelectorAll('.lab-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      const d = noetherData[key];
+      document.getElementById('noether-sym-title').textContent = d.title;
+      document.getElementById('noether-sym-desc').textContent = d.desc;
+      document.getElementById('noether-sym-eq').textContent = d.eq;
+      document.getElementById('noether-sym-steps').innerHTML = d.steps;
+    }
+
+    // 4. Laboratorio Ramanujan
+    function setRamLab(panel, btn) {
+      btn.parentElement.querySelectorAll('.lab-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      ['taxicab', 'particiones', 'pi'].forEach(p => {
+        document.getElementById('ram-panel-' + p).style.display = (p === panel) ? 'grid' : 'none';
+      });
+    }
+
+    function computePartitions() {
+      const input = document.getElementById('part-n');
+      let n = parseInt(input.value, 10);
+      if (isNaN(n) || n < 1) n = 1;
+      if (n > 15) n = 15;
+      input.value = n;
+
+      const results = [];
+      function helper(target, maxVal, current) {
+        if (target === 0) {
+          results.push('[' + current.join('+') + ']');
+          return;
+        }
+        for (let i = Math.min(target, maxVal); i >= 1; i--) {
+          current.push(i);
+          helper(target - i, i, current);
+          current.pop();
+        }
+      }
+      helper(n, n, []);
+      const preview = results.length > 12 ? results.slice(0, 12).join(', ') + ' ...' : results.join(', ');
+      document.getElementById('part-output').textContent = `p(${n}) = ${results.length} particiones → ${preview}`;
+    }
+
+    function showPiTerm(kMax) {
+      function fact(num) {
+        let r = 1;
+        for (let i = 2; i <= num; i++) r *= i;
+        return r;
+      }
+      let sum = 0;
+      for (let k = 0; k <= kMax; k++) {
+        const num = fact(4 * k) * (1103 + 26390 * k);
+        const den = Math.pow(fact(k), 4) * Math.pow(396, 4 * k);
+        sum += num / den;
+      }
+      const invPi = (2 * Math.SQRT2 / 9801) * sum;
+      const piApprox = 1 / invPi;
+      const note = kMax === 0
+        ? '¡7 decimales exactos con un solo término!'
+        : '¡15 decimales exactos (precisión máxima estándar IEEE 754) con solo 2 términos!';
+      document.getElementById('pi-output').textContent = `k = 0..${kMax}: π ≈ ${piApprox.toFixed(15)} (${note})`;
+    }
+
+    function toggleTranscript() {
+      document.getElementById('ram-transcript').classList.toggle('open');
+    }
+
+    // 5. Quizzes interactivos
+    function switchQuiz(person) {
+      document.getElementById('qtab-noether').classList.toggle('active', person === 'noether');
+      document.getElementById('qtab-ramanujan').classList.toggle('active', person === 'ramanujan');
+      document.getElementById('quiz-noether').style.display = person === 'noether' ? 'block' : 'none';
+      document.getElementById('quiz-ramanujan').style.display = person === 'ramanujan' ? 'block' : 'none';
+    }
+
+    function setupQuiz(formId, keys, resultId) {
+      document.getElementById(formId).addEventListener('submit', function(e) {
+        e.preventDefault();
+        let score = 0;
+        const total = Object.keys(keys).length;
+        for (const [q, answer] of Object.entries(keys)) {
+          const question = this.querySelector('input[name="' + q + '"]').closest('.quiz-q');
+          const selected = question.querySelector('input[name="' + q + '"]:checked');
+          question.querySelectorAll('.option').forEach(l => l.classList.remove('is-correct', 'is-incorrect'));
+          const oldFb = question.querySelector('.quiz-feedback');
+          if (oldFb) oldFb.remove();
+
+          const correctLabel = question.querySelector('input[value="' + answer + '"]').closest('.option');
+          correctLabel.classList.add('is-correct');
+
+          const fb = document.createElement('p');
+          fb.className = 'quiz-feedback';
+          if (selected && selected.value === answer) {
+            score++;
+            fb.textContent = '¡Correcta!';
+          } else {
+            fb.classList.add('is-incorrect');
+            if (selected) {
+              selected.closest('.option').classList.add('is-incorrect');
+              fb.textContent = 'Incorrecta. Respuesta correcta: ' + correctLabel.textContent.trim() + '.';
+            } else {
+              fb.textContent = 'Sin responder. Respuesta correcta: ' + correctLabel.textContent.trim() + '.';
+            }
+          }
+          question.appendChild(fb);
+        }
+        const missed = total - score;
+        document.getElementById(resultId).textContent = `${score} de ${total} correctas. ` +
+          (missed === 0 ? '¡Excelente, todas correctas!' : `Revisa las respuestas marcadas arriba.`);
+      });
+    }
+
+    function resetQuiz(person) {
+      const form = document.getElementById('quiz-' + person);
+      form.reset();
+      form.querySelectorAll('.option').forEach(l => l.classList.remove('is-correct', 'is-incorrect'));
+      form.querySelectorAll('.quiz-feedback').forEach(f => f.remove());
+      document.getElementById('result-' + person).textContent = '';
+    }
+
+    setupQuiz('quiz-noether', { nq1: 'a', nq2: 'b', nq3: 'a', nq4: 'a' }, 'result-noether');
+    setupQuiz('quiz-ramanujan', { rq1: 'a', rq2: 'b', rq3: 'a', rq4: 'a' }, 'result-ramanujan');
   </script>
 </body>
 </html>
